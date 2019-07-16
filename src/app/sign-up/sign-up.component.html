@@ -1,0 +1,23 @@
+<form  [formGroup]="signUpForm">
+  <label > username</label>
+  <input type="text"
+         placeholder="username"
+         formControlName="username">
+  <hr>
+  <label >password</label>
+  <input type="text"
+         placeholder="password"
+         formControlName="password">
+  <hr>
+  <label >email</label>
+  <input type="text"
+         placeholder="email"
+         formControlName="email">
+  <hr>
+  <label >Zip </label>
+  <input type="text"
+         placeholder="zip"
+         formControlName="zip">
+</form>
+
+<button (click)="onSignUp()">Signup</button>
