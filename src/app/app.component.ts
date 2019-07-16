@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "./service/user.service";
 
 @Component({
   selector: 'geekwise-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'review';
+  constructor( public userService: UserService) {}
 }

@@ -6,11 +6,16 @@ import {DataService} from "../services/data.service";
   providedIn: 'root'
 })
 export class ApiService {
+  public id: number = 0;
 
   constructor(public data: DataService) { }
   
   public signUp(user: User) {
-    return this.data.users.push(user);
+    this.id++;
+    user.id = String(this.id);
+    const newUser = new User(user.username, user.firstName, user.last_name, user.email, user.password, user.id, user.zip);
+    console.log(newUser);
+    return this.data.users.push(newUser);
   }
   
   public deleteAccount(user: User) {

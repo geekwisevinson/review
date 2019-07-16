@@ -12,5 +12,14 @@ export class DataService {
   public posts: Post[] = [];
   constructor() { }
 
+  public getUserById(id) {
+    let user = null;
+    this.users.forEach( item => {
+      if (item.id === id) {
+        user = item;
+      }
+    })
+    return user;
+  }
 
 }

@@ -1,5 +1,5 @@
 export class User {
-  public friendIds: string[];
+  public friendIds: any[] = [];
   public status: string;
   constructor(
     public username: string,

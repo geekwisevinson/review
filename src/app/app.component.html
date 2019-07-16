@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <geekwise-sign-up></geekwise-sign-up>
 <geekwise-user-list></geekwise-user-list>
-
+<geekwise-friend-list *ngIf="userService.loggedInAs" [loggedInUser]="userService.loggedInAs"></geekwise-friend-list>
+{{userService?.loggedInAs}}
 <router-outlet></router-outlet>

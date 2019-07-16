@@ -19,4 +19,8 @@ export class UserListComponent implements OnInit {
     this.userService.loginUser(user);
   }
 
+  public onFriendRequest(user: User) {
+    this.userService.friendRequest(user);
+  }
+
 }

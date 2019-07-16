@@ -1,1 +1,17 @@
-<p>friend-list works!</p>
+
+<div class="container">
+  logged in user: {{loggedInUser.username}}
+  <p>friend-list works!</p>
+</div>
+<div class="container">
+  <ng-container *ngFor="let userId of loggedInUser.friendIds">
+    <div class="card" style="width: 18rem;" >
+      <div class="card-body">
+
+        <h5 class="card-title">{{data.getUserById(userId).username}}</h5>
+        <p class="card-text">{{userId}}</p>
+
+      </div>
+    </div>
+  </ng-container>
+</div>
