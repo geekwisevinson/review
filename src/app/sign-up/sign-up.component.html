@@ -1,23 +1,41 @@
-<form  [formGroup]="signUpForm">
-  <label > username</label>
-  <input type="text"
-         placeholder="username"
-         formControlName="username">
-  <hr>
-  <label >password</label>
-  <input type="text"
-         placeholder="password"
-         formControlName="password">
-  <hr>
-  <label >email</label>
-  <input type="text"
-         placeholder="email"
-         formControlName="email">
-  <hr>
-  <label >Zip </label>
-  <input type="text"
-         placeholder="zip"
-         formControlName="zip">
-</form>
+<div class="container">
+  <form  [formGroup]="signUpForm">
+    <div class="form-group">
+      <label > username</label>
+      <input type="text"
+             placeholder="username"
+             class="form-control"
+             formControlName="username">
+    </div>
 
-<button (click)="onSignUp()">Signup</button>
+    <div class="form-group">
+      <label >password</label>
+      <input type="text"
+             class="form-control"
+             placeholder="password"
+             formControlName="password">
+    </div>
+
+    <div class="form-group">
+      <label >email</label>
+      <input type="text"
+             placeholder="email"
+             class="form-control"
+             formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label >Zip </label>
+      <input type="text"
+             placeholder="zip"
+             class="form-control"
+             formControlName="zip">
+    </div>
+
+  </form>
+
+  <button (click)="onSignUp()" class="btn-primary btn">Signup</button>
+</div>
+
+
+

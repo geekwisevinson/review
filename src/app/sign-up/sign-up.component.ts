@@ -26,6 +26,7 @@ export class SignUpComponent implements OnInit {
       const user = this.signUpForm.value;
       this.userService.createUser(user);
       console.log(this.data);
+      this.signUpForm.reset();
     }
   }
 }

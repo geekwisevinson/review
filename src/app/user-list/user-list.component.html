@@ -1,0 +1,14 @@
+<div class="container">
+  logged in as: {{userService.loggedInAs?.username}}
+  <ng-container *ngFor="let user of data.users">
+    <div class="card" style="width: 18rem;" >
+      <div class="card-body">
+        <button class="btn btn-secondary" (click)="onLogin(user)">Log in As</button>
+        <h5 class="card-title">{{user.username}}</h5>
+        <p class="card-text">{{user.email}}</p>
+        <a href="#" class="btn btn-primary">Friend Request</a>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

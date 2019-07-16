@@ -7,6 +7,8 @@ import {ApiService} from "./api.service";
 })
 export class UserService {
 
+  public loggedInAs = null;
+
   constructor(private apiService: ApiService) { }
 
   public createUser(user: User) {
@@ -23,6 +25,9 @@ export class UserService {
 
   }
 
+  public loginUser(user: User) {
+    this.loggedInAs = user;
+  }
 
 
 }
